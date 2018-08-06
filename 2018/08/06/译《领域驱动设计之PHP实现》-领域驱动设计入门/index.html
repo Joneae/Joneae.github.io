@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="PHP," />
 
 
 
@@ -75,14 +75,18 @@
 
 
 
-<meta name="keywords" content="博客 PHP VPP 网络安全 信息技术 软件开发 信息安全 WEB前端 WEB后台 Golang Javascript 翻译">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人博客">
-<meta property="og:url" content="http://blog.shannyuan.com/index.html">
+<meta name="description" content="那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。">
+<meta name="keywords" content="PHP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="译《领域驱动设计之PHP实现》 --领域驱动设计入门">
+<meta property="og:url" content="http://blog.shannyuan.com/2018/08/06/译《领域驱动设计之PHP实现》-领域驱动设计入门/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-06T15:41:12.608Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人博客">
+<meta name="twitter:title" content="译《领域驱动设计之PHP实现》 --领域驱动设计入门">
+<meta name="twitter:description" content="那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。">
 
 
 
@@ -112,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.shannyuan.com/"/>
+  <link rel="canonical" href="http://blog.shannyuan.com/2018/08/06/译《领域驱动设计之PHP实现》-领域驱动设计入门/"/>
 
 
 
 
 
-  <title>个人博客</title>
+  <title>译《领域驱动设计之PHP实现》 --领域驱动设计入门 | 个人博客</title>
   
 
 
@@ -137,8 +141,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -231,9 +234,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -263,9 +266,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/06/译《领域驱动设计之PHP实现》-领域驱动设计入门/" itemprop="url">译《领域驱动设计之PHP实现》 --领域驱动设计入门</a></h1>
+          <h1 class="post-title" itemprop="name headline">译《领域驱动设计之PHP实现》 --领域驱动设计入门</h1>
         
 
         <div class="post-meta">
@@ -337,16 +338,24 @@
       
 
       
-        
-          <p>那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/06/译《领域驱动设计之PHP实现》-领域驱动设计入门/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。<br><a id="more"></a></p>
+<p>更重要的是，领域驱动设计并不是一种新技术。而是关于开发业务逻辑的知识以及使用技术提供价值。只有当你能够理解你所在公司从事的业务时，你才能够参与软件模型发掘过程，从而产生一种通用的语言。</p>
+<h3 id="为什么使用领域驱动设计？"><a href="#为什么使用领域驱动设计？" class="headerlink" title="为什么使用领域驱动设计？"></a>为什么使用领域驱动设计？</h3><ul>
+<li>软件不仅对程序员有意义，对业务也有意义。领域驱动设计强调确保业务和代码使用同样的语言。</li>
+<li>软件优先级与业务优先级保持一致。</li>
+<li>使用DDD，每个人都可以学习并致力于业务开发领域。</li>
+<li>系统知识不再只专属于开发人员，DDD使得每个人都能知道业务到底是如何运作的。</li>
+<li>领域专家之间没有翻译，这意味着信息同步没有丢失及冗余。每个人都使用同一种语言。</li>
+<li>设计就是代码，代码就是设计，是通用语言唯一实现的真理。专注于通过敏捷开发持续交互软件。</li>
+<li>DDD为战略性设计提供了一种框架，指出基于业务价值快速构建模式开发的最重要领域。</li>
+</ul>
+<h3 id="领域驱动设计如何解决问题？"><a href="#领域驱动设计如何解决问题？" class="headerlink" title="领域驱动设计如何解决问题？"></a>领域驱动设计如何解决问题？</h3><p>领域驱动设计是一种交付软件的方法，主要关注以下三个方面：</p>
+<ol>
+<li><strong>通用的语言</strong>：领域专家和软件开发者共同为正在开发的业务领域构建通用的语言。没有“我们与他们”，全都是我们。开发软件是一种商业投资，而不仅仅是一种成本。构建通用语言过程中的投入有助于在所有团队成员之间传播深度的领域洞察能力。</li>
+<li><strong>策略性设计</strong>：DDD制定了业务发展背后的策略，而不仅仅是技术方面。它有助于定义内部关系和早期预警反馈机制。在技术方面，策略性设计通过提供面向服务框架的驱动来保护每个业务。</li>
+<li><strong>战术性设计</strong>：DDD为迭代性软件交付提供了工具和构建模块。战术性设计工具设计的软价是正确的，作为领域专家的核心模型，是可测试的，较少出现错误的。</li>
+</ol>
+
       
     </div>
     
@@ -356,165 +365,70 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="黄江林 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="黄江林 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.shannyuan.com/2018/08/04/译《领域驱动设计之PHP实现》-–-序言/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="黄江林">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="个人博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/04/译《领域驱动设计之PHP实现》-–-序言/" itemprop="url">译《领域驱动设计之PHP实现》 – 序言</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-04T13:28:10+08:00">
-                2018-08-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">翻译</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/PHP/" rel="tag"><i class="fa fa-tag"></i> PHP</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>在2014年，经过两年的阅读积累和实践，我的朋友兼同事，Carlos和Christian一起前往柏林参加Vaughn Vernon的实现领域驱动设计研讨会。期间的训练非常棒，在旅行前所有盘旋在他们脑海里的一些概念变得越来越清晰。然而他们仅仅一屋子的Java和.NET工程师中的两个PHPer。<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/04/译《领域驱动设计之PHP实现》-–-序言/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/04/译《领域驱动设计之PHP实现》-–-序言/" rel="next" title="译《领域驱动设计之PHP实现》 – 序言">
+                <i class="fa fa-chevron-left"></i> 译《领域驱动设计之PHP实现》 – 序言
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -524,10 +438,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -535,6 +450,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODYzNi8xNTE2NA=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -555,8 +479,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -636,6 +569,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用领域驱动设计？"><span class="nav-number">1.</span> <span class="nav-text">为什么使用领域驱动设计？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#领域驱动设计如何解决问题？"><span class="nav-number">2.</span> <span class="nav-text">领域驱动设计如何解决问题？</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -785,6 +734,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -813,6 +766,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
