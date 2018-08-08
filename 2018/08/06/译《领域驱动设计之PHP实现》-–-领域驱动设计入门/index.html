@@ -83,7 +83,7 @@
 <meta property="og:site_name" content="个人博客">
 <meta property="og:description" content="那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-07T13:29:33.698Z">
+<meta property="og:updated_time" content="2018-08-08T12:53:36.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="译《领域驱动设计之PHP实现》 – 领域驱动设计入门">
 <meta name="twitter:description" content="那么，让我们来揭开领域驱动设计的神秘面纱吧。领域驱动设计即Domain-Driven Design（DDD）是一种帮助我们更好的理解和实现软件建模的一种方式。它为我们提供了具有战略意义的建模工具来帮助我们设计出能够满足我们业务需求的高质量软件。">
@@ -355,7 +355,47 @@
 <li><strong>策略性设计</strong>：DDD制定了业务发展背后的策略，而不仅仅是技术方面。它有助于定义内部关系和早期预警反馈机制。在技术方面，策略性设计通过提供面向服务框架的驱动来保护每个业务。</li>
 <li><strong>战术性设计</strong>：DDD为迭代性软件交付提供了工具和构建模块。战术性设计工具设计的软价是正确的，作为领域专家的核心模型，是可测试的，较少出现错误的。</li>
 </ol>
-<p>#### </p>
+<h4 id="通用语言"><a href="#通用语言" class="headerlink" title="通用语言"></a>通用语言</h4><p>在相关场景，通用的语言是DDD的主要优势之一。</p>
+<blockquote>
+<p>关于场景</p>
+<blockquote>
+<p>目前，相关场景指的是一个系统的概念边界<br>边界内，通用语言具有特定的语境意义。边界之外，可能有不同的含义</p>
+</blockquote>
+</blockquote>
+<p>那么，如何捕捉这种特殊的语言呢？</p>
+<ul>
+<li>用物理物理和概念领域的动作名来标记与建模。</li>
+<li>创建和定义术语表。</li>
+<li>用文档捕获重要的软件概念。</li>
+<li>与团队中的其他人分享和拓展收集到的知识。</li>
+</ul>
+<h3 id="我应该考虑将DDD作为选项吗？"><a href="#我应该考虑将DDD作为选项吗？" class="headerlink" title="我应该考虑将DDD作为选项吗？"></a>我应该考虑将DDD作为选项吗？</h3><p>DDD不是一颗银弹，在软件的方方面面，它取决于上下文场景。一般来说，我们用它来简化你的领域，而不是增加更多的复杂性。</p>
+<p>如果你的应用程序是以数据为中心，同时应用场景围绕数据的增删查改操作，那么，你并不需要DDD。你公司唯一需要的就是在数据库前有一张漂亮的脸（前端操作界面）。</p>
+<p>如果你的应用程序用例少于30个，也许用Symfony或者Laravel之类的框架来处理你的业务逻辑更加简单。</p>
+<p>如果你有超过30个用列，你的系统可能会变成一个“大泥球”。如果你知道你的系统会变得越来越复杂，你可以考虑使用DDD来解决问题。</p>
+<p>如果你知道你的应用逻辑会越来越多，并且可能经常变更，随着时间的推移，DDD将肯定有助于管理复杂性和重构模型。</p>
+<p>如果你不理解你正在研究的领域，因为它是新的，以前没人提出过解决方案，可能应用DDD将变得复杂。这时，你需要与领域专家密切合作，以建立正确的模型。</p>
+<h3 id="使用DDD面临的主要挑战"><a href="#使用DDD面临的主要挑战" class="headerlink" title="使用DDD面临的主要挑战"></a>使用DDD面临的主要挑战</h3><p>在你使用DDD的过程中，你可能会遇到一些挑战。</p>
+<p>使用DDD意味着你必须要考虑业务领域，术语，与领域专家之间的协作，而不仅仅是代码。这将需要时间和精力。</p>
+<p>你需要与领域专家保持一致来参与构建软件的过程。你需要领域专家揭露领域的深度知识。需要与专家进行公开、健康、尊重和持续的交流来将他们的口语转化为软件。</p>
+<p>我们开发人员是技术思考者。技术方案是我们的专长。思考技术问题是没错的，唯一的问题是少思考一些技术问题会更好。为了能够通过对象的行为思考，我们首先需要在通用语言中进行思考。</p>
+<h3 id="使用DDD的业务价值"><a href="#使用DDD的业务价值" class="headerlink" title="使用DDD的业务价值"></a>使用DDD的业务价值</h3><p>证明一项技术的最佳方法是为业务提供价值。总而言之，用DDD的主要优势如下：</p>
+<ul>
+<li>领域内有意义的模型</li>
+<li>领域专家为软件设计贡献力量</li>
+<li>更好的用户体验</li>
+<li>没有界限</li>
+<li>更好的架构组织</li>
+<li>敏捷开发基础上持续可迭代的模型</li>
+<li>更好的工具，更具策略与战术</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>实现DDD需要时间与精力。如果像想象中那么容易的话，每个人都可以写出高质量的代码。做好准备，通过这个过程，你将学习如何让你的思维及流程看起来就像你的软件是如何工作的一样。在这一章节中，介绍了如下知识：</p>
+<ul>
+<li>DDD并不是一项技术，而是如何通过模型设计来为你所在的工作领域提供价值。每个人都参与发掘领域的过程，开发者与领域专家通过共享相同的语言（通用语言）来构建知识库。</li>
+<li>DDD提供了战略性、战术性的建模工具来定义高质量的软件。战略设计以业务方向为目标，帮助定义内部关系，并通过定义强边界，在技术上保护每个业务服务。战术设计为版本迭代提供了有用的构建模块。</li>
+<li>我们眼界了DDD的意义所在，DDD并不是软件开发解决问题的万能钥匙，取决于你所处理的业务的复杂度。</li>
+<li>我们也看到，使用DDD是一项长期投资，它需要积极的努力。领域专家需要与开发者进行深度合作，开发者也必须在业务方面做一些思考。最后，最终目的都是要让客户满意。</li>
+</ul>
 
       
     </div>
@@ -584,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用领域驱动设计？"><span class="nav-number">1.</span> <span class="nav-text">为什么使用领域驱动设计？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#领域驱动设计如何解决问题？"><span class="nav-number">2.</span> <span class="nav-text">领域驱动设计如何解决问题？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么使用领域驱动设计？"><span class="nav-number">1.</span> <span class="nav-text">为什么使用领域驱动设计？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#领域驱动设计如何解决问题？"><span class="nav-number">2.</span> <span class="nav-text">领域驱动设计如何解决问题？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通用语言"><span class="nav-number">2.1.</span> <span class="nav-text">通用语言</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#我应该考虑将DDD作为选项吗？"><span class="nav-number">3.</span> <span class="nav-text">我应该考虑将DDD作为选项吗？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用DDD面临的主要挑战"><span class="nav-number">4.</span> <span class="nav-text">使用DDD面临的主要挑战</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用DDD的业务价值"><span class="nav-number">5.</span> <span class="nav-text">使用DDD的业务价值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -638,7 +678,7 @@
 <span class="post-meta-divider">|</span>
 <div class="theme-info">
   <i class="fa fa-pencil"></i>
-  <span class="post-count">博客全站共 4.4k 字</span>
+  <span class="post-count">博客全站共 5.5k 字</span>
 </div>
 
 
